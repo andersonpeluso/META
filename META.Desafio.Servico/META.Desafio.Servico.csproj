@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\META.Desafio.CrossCutting\META.Desafio.CrossCutting.csproj" />
+    <ProjectReference Include="..\META.Desafio.Dominio\META.Desafio.Dominio.csproj" />
+  </ItemGroup>
+
+</Project>
