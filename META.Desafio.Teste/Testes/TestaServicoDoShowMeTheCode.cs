@@ -18,7 +18,7 @@ namespace META.Desafio.Teste.Testes
         public void ShowMeTheCodeTesteOk()
         {
             var response = _showMeTheCode.ObterEnderecoDoGithub();
-            response.Should().Be("https://github.com/andersonpeluso");
+            response.Should().Be("https://github.com/andersonpeluso/META");
         }
 
         [Fact]

@@ -4,7 +4,7 @@
     {
         public string ObterEnderecoGithub()
         {
-            return "https://github.com/"; ;
+            return "https://github.com/andersonpeluso/META"; ;
         }
     }
 }
