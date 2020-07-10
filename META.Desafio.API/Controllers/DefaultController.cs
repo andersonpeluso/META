@@ -7,7 +7,7 @@ using System.Linq;
 namespace META.Desafio.API.Controllers
 {
     [ApiController]
-    [Authorize]
+   // [Authorize]
     public abstract class DefaultController : ControllerBase
     {
         protected ICollection<string> Erros = new List<string>();

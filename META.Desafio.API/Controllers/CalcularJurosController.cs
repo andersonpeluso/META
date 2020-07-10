@@ -16,7 +16,15 @@ namespace META.Desafio.API.Controllers
         [HttpGet("calculajuros")]
         public ActionResult<double> CalculaJuros(double valorInicial, int tempo)
         {
-            return _calculoDeJuros.CalcularJuros(valorInicial, tempo);
+            if (valorInicial == 0 || tempo == 0)
+            {
+                AdicionarErroProcessamento("Parâmetro não informado.");
+                return CustomResponse();
+            }
+
+            double? total = _calculoDeJuros.CalcularJuros(valorInicial, tempo);
+
+            return CustomResponse(total);
         }
     }
 }

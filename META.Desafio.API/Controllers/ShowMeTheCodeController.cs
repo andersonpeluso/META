@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace META.Desafio.API.Controllers
 {
-    [Route("api/")]
+    [Route("api/[controller]")]
     public class ShowMeTheCodeController : DefaultController
     {
         private readonly IShowMeTheCode _showMeTheCode;
@@ -13,11 +13,11 @@ namespace META.Desafio.API.Controllers
             _showMeTheCode = showMeTheCode;
         }
 
-        [Route("showmethecode")]
+        //[Route("showmethecode")]
         [HttpGet]
         public ActionResult<string> ObterEnderecoDoGithub()
         {
-            return _showMeTheCode.ObterEnderecoDoGithub();
+            return CustomResponse(_showMeTheCode.ObterEnderecoDoGithub());
         }
     }
 }

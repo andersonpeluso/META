@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace META.Desafio.API.Controllers
 {
     [Route("api/")]
-    public class TaxaJurosController : ControllerBase
+    public class TaxaJurosController : DefaultController
     {
         private readonly ITaxaDeJuros _taxaDeJuros;
 
@@ -17,13 +17,7 @@ namespace META.Desafio.API.Controllers
         [HttpGet]
         public ActionResult<double> ObterTaxaDeJuros()
         {
-            //if (_taxaDeJuros.ObterTaxaDeJuros() == )
-            //{
-            //    AdicionarErroProcessamento("Não conseguir carregar todos os usuários.");
-            //    return CustomResponse();
-            //}
-
-            return _taxaDeJuros.ObterTaxaDeJuros();
+            return CustomResponse(_taxaDeJuros.ObterTaxaDeJuros());
         }
     }
 }
